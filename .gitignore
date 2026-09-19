@@ -1,0 +1,3 @@
+.venv
+DEVIN_API_KEY=apk_user_dXNlci0wOThlN2YxY2I5NTI0NmY3YTgwMzIyM2Y2NzdkN2Q4NF9vcmctZDNmZWNjODVkNWQ2NGE5NzkyMzQ4MjgyZTdhMDVmNTQ6ODhlYTZmNWVkMWI1NGI4ZmFhYTllZWQ3MDkyOTFkNWI= echo .env pip install python-dotenv
+.env

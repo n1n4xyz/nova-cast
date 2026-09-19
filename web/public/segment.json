@@ -1,0 +1,74 @@
+{
+  "title": "Fingerprint launches a Bot Directory for the AI era",
+  "claims": [
+    {
+      "text": "On September 18, 2026, Fingerprint announced the launch of Bot Directory.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "September 18th 2026",
+        "launch of Bot Directory",
+        "Fingerprint Launches Bot Directory"
+      ]
+    },
+    {
+      "text": "Bot Directory is a continuously updated, searchable repository of AI tools, bots, and crawlers.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "continuously updated, searchable repository of AI tools, bots, and crawlers",
+        "searchable and filterable directory"
+      ]
+    },
+    {
+      "text": "The directory is powered by Fingerprint's Bot Detection Smart Signal and is a public resource.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "Bot Detection Smart Signal",
+        "public resource"
+      ]
+    },
+    {
+      "text": "The directory is public and lets you look up a bot's identity, provider, and purpose.",
+      "source_url": "https://fingerprint.com/bot-directory/",
+      "evidence_terms": [
+        "Bot directory",
+        "A continuously updated directory of bots Fingerprint can detect"
+      ]
+    },
+    {
+      "text": "Users can test their own AI agents for Web Bot Auth compliance and submit them for inclusion in the directory.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "Web Bot Auth (WBA) compliance",
+        "submit them for inclusion"
+      ]
+    },
+    {
+      "text": "Fingerprint states that bots account for the majority of web traffic.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "Bots account for the majority of web traffic",
+        "automated web traffic"
+      ]
+    },
+    {
+      "text": "Fingerprint states that many organizations still rely on legacy bot directories built before the rise of generative AI.",
+      "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-18-fingerprint-launches-bot-directory-built-for-the-ai-era",
+      "evidence_terms": [
+        "legacy bot directories",
+        "rise of generative AI",
+        "malicious browser automation"
+      ]
+    }
+  ],
+  "scenes": [
+    "The presenter speaks calmly to camera, relaxed posture.",
+    "The presenter continues explaining, one small hand gesture.",
+    "The presenter leans slightly forward and keeps talking to camera.",
+    "The presenter keeps talking calmly to camera and ends with a small nod, same framing."
+  ],
+  "script": "Here is something worth knowing if you run a website. On September 18, 2026, Fingerprint announced the launch of Bot Directory, a continuously updated, searchable repository of AI tools, bots, and crawlers. It is powered by Fingerprint's Bot Detection Smart Signal, and the directory is public, so you can look up a bot's identity, provider, and purpose yourself. You can also test your own AI agent for Web Bot Auth compliance and submit it for inclusion. Fingerprint points out that bots account for the majority of web traffic, and that many organizations still lean on legacy bot directories built before the rise of generative AI. If automated traffic is reaching your site, this gives you a calm place to start looking.",
+  "ai_label": true,
+  "references": [
+    "nina_podcast.png"
+  ]
+}
