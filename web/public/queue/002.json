@@ -1,0 +1,62 @@
+{
+  "title": "Flock offers buyouts to shrink its workforce",
+  "claims": [
+    {
+      "text": "Flock Safety has offered its employees a voluntary severance package, according to a Wired report.",
+      "source_url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+      "evidence_terms": [
+        "severance package",
+        "voluntary employee departures",
+        "according to a report in Wired"
+      ]
+    },
+    {
+      "text": "Flock expects a significant share of its 1,500-person workforce to show interest in the buyouts.",
+      "source_url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+      "evidence_terms": [
+        "1,500-person workforce",
+        "significant portion",
+        "express interest in the buyouts"
+      ]
+    },
+    {
+      "text": "Without buyouts, Flock would almost certainly need to lay off some staff.",
+      "source_url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+      "evidence_terms": [
+        "without buyouts",
+        "almost certainly",
+        "lay off some staff"
+      ]
+    },
+    {
+      "text": "90 cities dropped Flock in August alone, amid backlash over its license plate recognition technology.",
+      "source_url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+      "evidence_terms": [
+        "90 cities",
+        "dropped Flock in August alone",
+        "license plate recognition technology"
+      ]
+    }
+  ],
+  "scenes": [
+    "Medium shot of the presenter speaking directly to camera. A lower-third graphic reads: Flock Safety offers voluntary buyouts. Small source tag: Wired via TechCrunch.",
+    "Close-up of the presenter. An on-screen callout appears to the side of frame: 1,500-person workforce. A second line fades in: Buyouts expected to draw significant interest.",
+    "Side-view shot of the presenter, camera slowly pushing in. A graphic panel shows a simple counter: 90 cities dropped Flock in August, with the subtitle: backlash over license plate recognition."
+  ],
+  "script": "If you follow surveillance tech, here is a shift worth noting. Flock Safety has offered its employees a voluntary severance package, according to a Wired report. The company expects a significant share of its 1,500-person workforce to show interest. Without those buyouts, Flock would almost certainly need to lay off some staff. The move comes after 90 cities dropped Flock in August alone, amid backlash over its license plate recognition technology.",
+  "ai_label": true,
+  "references": [
+    "nina_podcast.png",
+    "nina_portrait.png",
+    "nina_profile.png"
+  ],
+  "audio_url": "https://v3b.fal.media/files/b/0aab26b0/my5Q7Md0kuT6jEtcLjjk0_nina_1789887205443.wav",
+  "audio_seconds": 28.7,
+  "tts_latency": 7.11,
+  "news": {
+    "key": "2c088408c259e2a39189ea9c53c79865fcc6e57b",
+    "title": "Flock reportedly tries to shrink workforce with employee buyouts",
+    "url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+    "summary": "Without buyouts, Flock would \"almost certainly\" need to lay off staff."
+  }
+}

@@ -59,7 +59,7 @@ News item:
 {news}
 
 Deliver the segment ONLY as structured output matching the schema. Rules:
-- script: 35 to 45 seconds spoken, second person, calm, no em dashes
+- script: 20 to 25 seconds spoken, second person, calm, no em dashes
 - scenes: describe ONLY action, camera and on-screen graphics. Refer to her only as
   "the presenter". Never describe her appearance, hair, clothing, face or the studio;
   those come from a reference image. Never depict a real person.
