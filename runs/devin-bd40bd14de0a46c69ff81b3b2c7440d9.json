@@ -1,0 +1,156 @@
+{
+  "id": "devin-bd40bd14de0a46c69ff81b3b2c7440d9",
+  "url": "https://app.devin.ai/sessions/bd40bd14de0a46c69ff81b3b2c7440d9",
+  "news": {
+    "title": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking",
+    "url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+    "summary": "Vals AI is hoping to make AI benchmarking a more neutral and trustworthy resource in a world increasingly inundated by AI models."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "blocked",
+      "spec": {
+        "title": "Vals wants to be the gold standard for AI benchmarking",
+        "claims": [
+          {
+            "text": "Vals is a startup formed in 2024 that says legacy benchmarking systems are being outwitted by AI companies.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "formed in 2024",
+              "outwit legacy benchmarking systems",
+              "imperfect system"
+            ]
+          },
+          {
+            "text": "Last month Vals raised $40 million in a Series A led by Andreessen Horowitz.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "$40 million",
+              "series A",
+              "Andreessen Horowitz",
+              "last month"
+            ]
+          },
+          {
+            "text": "Vals does not publicly disclose its test materials and evaluates models on tasks in law, finance and coding.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "doesn\u2019t publicly disclose its specific test materials",
+              "law, finance, and coding"
+            ]
+          },
+          {
+            "text": "Companies pay Vals to test their models, which its founder compares to students paying the College Board to take the SAT.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "Companies pay Vals to test their models",
+              "College Board",
+              "SAT"
+            ]
+          },
+          {
+            "text": "Vals' revenue is eight times what it was last year and its team has tripled to 25 people.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "eight times what it was last year",
+              "tripled to a team of 25"
+            ]
+          }
+        ],
+        "scenes": [
+          "Wide studio shot, the presenter faces camera and speaks calmly; a lower-third graphic reads 'Vals AI: the new benchmark for benchmarks'.",
+          "Close-up, the presenter gestures toward a side panel graphic showing '$40M Series A, led by Andreessen Horowitz' with a 2024 founding date beneath.",
+          "Side view, the presenter turns to a floating graphic listing 'Private test sets' and three domain icons labeled Law, Finance, Coding.",
+          "Wide studio shot, the presenter wraps up as an on-screen counter animates '8x revenue' and 'team tripled to 25'."
+        ],
+        "script": "If you have ever wondered whether AI benchmarks can be gamed, you are not alone. Vals, a startup founded in 2024, says legacy benchmarks are being outwitted and wants to fix that. Last month it raised 40 million dollars in a Series A led by Andreessen Horowitz. Its approach: keep the test materials private, and grade models on real tasks in law, finance and coding. Companies pay Vals to be tested, a bit like students paying for the SAT. Revenue is now eight times last year's, and the team has tripled to 25.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast.png",
+          "nina_portrait.png",
+          "nina_profile.png",
+          "nina_podcast.png"
+        ]
+      },
+      "errors": [
+        "scene 0: describes appearance or set (['studio']), use 'the presenter' only",
+        "scene 3: describes appearance or set (['studio']), use 'the presenter' only",
+        "reference 0: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 1: 'nina_portrait.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 2: 'nina_profile.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 3: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "claim 2: terms not found on source page: ['doesn\u2019t publicly disclose its specific test materials']"
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "blocked",
+      "spec": {
+        "title": "Vals wants to be the gold standard for AI benchmarking",
+        "claims": [
+          {
+            "text": "Vals is a startup formed in 2024 that says legacy benchmarking systems are being outwitted by AI companies.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "formed in 2024",
+              "outwit legacy benchmarking systems",
+              "imperfect system"
+            ]
+          },
+          {
+            "text": "Last month Vals raised $40 million in a Series A led by Andreessen Horowitz.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "$40 million",
+              "series A",
+              "Andreessen Horowitz",
+              "last month"
+            ]
+          },
+          {
+            "text": "Vals does not publicly disclose its test materials and evaluates models on tasks in law, finance and coding.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "publicly disclose its specific test materials",
+              "law, finance, and coding",
+              "publicly available"
+            ]
+          },
+          {
+            "text": "Companies pay Vals to test their models, which its founder compares to students paying the College Board to take the SAT.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "Companies pay Vals to test their models",
+              "College Board",
+              "SAT"
+            ]
+          },
+          {
+            "text": "Vals' revenue is eight times what it was last year and its team has tripled to 25 people.",
+            "source_url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+            "evidence_terms": [
+              "eight times what it was last year",
+              "tripled to a team of 25"
+            ]
+          }
+        ],
+        "scenes": [
+          "Wide shot, the presenter faces camera and speaks calmly; a lower-third graphic reads 'Vals AI: the new benchmark for benchmarks'.",
+          "Medium shot, the presenter gestures toward a side panel graphic showing '$40M Series A, led by Andreessen Horowitz' with a 2024 founding date beneath.",
+          "Medium shot, the presenter turns to a floating graphic listing 'Private test sets' and three domain icons labeled Law, Finance, Coding.",
+          "Wide shot, the presenter wraps up as an on-screen counter animates '8x revenue' and 'team tripled to 25'."
+        ],
+        "script": "If you have ever wondered whether AI benchmarks can be gamed, you are not alone. Vals, a startup founded in 2024, says legacy benchmarks are being outwitted and wants to fix that. Last month it raised 40 million dollars in a Series A led by Andreessen Horowitz. Its approach: keep the test materials private, and grade models on real tasks in law, finance and coding. Companies pay Vals to be tested, a bit like students paying for the SAT. Revenue is now eight times last year's, and the team has tripled to 25.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast2.png",
+          "nina_podcast3_medium.png",
+          "nina_podcast4_medium.png",
+          "nina_podcast5.png"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

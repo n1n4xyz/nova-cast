@@ -1,0 +1,123 @@
+{
+  "id": "devin-f1247844e7024285b426442d53b80823",
+  "url": "https://app.devin.ai/sessions/f1247844e7024285b426442d53b80823",
+  "news": {
+    "title": "Meta\u2019s Muse is creepy, but maybe not for the reasons you think",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+    "summary": "Meta's Muse is apparently an effective AI assistant, but one that's a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts, Muse doesn't actually know how to describe itself. Jason Aten, a contributing editor at Inc Magazine, posted on Threads [&#8230;]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "blocked",
+      "spec": {
+        "title": "Meta\u2019s Muse is creepy, but maybe not for the reasons you think",
+        "claims": [
+          {
+            "text": "Meta\u2019s Muse can access Messages, Calendar, and Notes through its new Mac app.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "new Mac app",
+              "access Messages, Calendar, and Notes"
+            ]
+          },
+          {
+            "text": "Muse said it saw notification previews rather than reading message history.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "I saw the notification previews",
+              "I haven\u2019t been reading your texts"
+            ]
+          },
+          {
+            "text": "Meta said Muse syncs Messages only after the user specifically enables access.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "syncs data from Messages",
+              "specifically enabled access"
+            ]
+          },
+          {
+            "text": "Meta described Muse\u2019s explanation as incorrect and said it was working to improve the assistant\u2019s understanding of its internals.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "gave an incorrect explanation",
+              "working to improve Muse\u2019s understanding of its own internals"
+            ]
+          }
+        ],
+        "scenes": [
+          "Slow push-in on an abstract desktop assistant interface as animated labels for Messages, Calendar, and Notes appear one by one; overlay the title \u201cAccess can feel intrusive.\u201d",
+          "Cut to a split-screen graphic showing a notification preview beside a permission toggle changing from off to on; add the caption \u201cWhat did it actually see?\u201d",
+          "Slow pullback from a clean animated system diagram with arrows between Muse, Messages, and device sync; the arrows briefly scramble, then display \u201cCan\u2019t explain its own plumbing.\u201d"
+        ],
+        "script": "When you hear that Meta\u2019s Muse can access Messages, Calendar, and Notes, the creepy part seems obvious. But the bigger problem may be confusion. In one reported exchange, Muse said it saw notification previews. Meta later said Muse syncs Messages only after you enable access, and called the answer incorrect. So the unsettling takeaway is an assistant that cannot reliably explain how it works.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast.png",
+          "nina_profile.png",
+          "nina_portrait.png"
+        ]
+      },
+      "errors": [
+        "reference 0: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 1: 'nina_profile.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 2: 'nina_portrait.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']"
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "blocked",
+      "spec": {
+        "title": "Meta\u2019s Muse is creepy, but maybe not for the reasons you think",
+        "claims": [
+          {
+            "text": "Meta\u2019s Muse can access Messages, Calendar, and Notes through its new Mac app.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "new Mac app",
+              "access Messages, Calendar, and Notes"
+            ]
+          },
+          {
+            "text": "Muse said it saw notification previews rather than reading message history.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "I saw the notification previews",
+              "I haven\u2019t been reading your texts"
+            ]
+          },
+          {
+            "text": "Meta said Muse syncs Messages only after the user specifically enables access.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "syncs data from Messages",
+              "specifically enabled access"
+            ]
+          },
+          {
+            "text": "Meta described Muse\u2019s explanation as incorrect and said it was working to improve the assistant\u2019s understanding of its internals.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "evidence_terms": [
+              "gave an incorrect explanation",
+              "working to improve Muse\u2019s understanding of its own internals"
+            ]
+          }
+        ],
+        "scenes": [
+          "Slow push-in on an abstract desktop assistant interface as animated labels for Messages, Calendar, and Notes appear one by one; overlay the title \u201cAccess can feel intrusive.\u201d",
+          "Cut to a split-screen graphic showing a notification preview beside a permission toggle changing from off to on; add the caption \u201cWhat did it actually see?\u201d",
+          "Slow pullback from a clean animated system diagram with arrows between Muse, Messages, and device sync; the arrows briefly scramble, then display \u201cCan\u2019t explain its own plumbing.\u201d"
+        ],
+        "script": "When you hear that Meta\u2019s Muse can access Messages, Calendar, and Notes, the creepy part seems obvious. But the bigger problem may be confusion. In one reported exchange, Muse said it saw notification previews. Meta later said Muse syncs Messages only after you enable access, and called the answer incorrect. So the unsettling takeaway is an assistant that cannot reliably explain how it works.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast2.png",
+          "nina_podcast3.png",
+          "nina_podcast4.png"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

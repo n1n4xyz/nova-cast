@@ -1,0 +1,134 @@
+{
+  "id": "devin-a962e7e18e744c08ae6d0ad93a85ea06",
+  "url": "https://app.devin.ai/sessions/a962e7e18e744c08ae6d0ad93a85ea06",
+  "news": {
+    "title": "Petlibro\u2019s new AI-powered feeder is a game changer for multi-cat homes",
+    "url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+    "summary": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when \u2014 though the fanciest health-monitoring features will cost you an extra subscription."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "blocked",
+      "spec": {
+        "title": "Petlibro's Granary 2 feeders weigh every meal your cat eats",
+        "claims": [
+          {
+            "text": "Petlibro's Granary 2 series includes four models priced from $129.99 to $249.99.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "four models",
+              "$129.99",
+              "$249.99",
+              "Granary 2"
+            ]
+          },
+          {
+            "text": "Every Granary 2 model has a built-in scale that measures food remaining in the bowl to estimate actual intake.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "built-in scale",
+              "how much remains in the bowl",
+              "actually ate"
+            ]
+          },
+          {
+            "text": "Higher-priced models add an AI-powered camera that recognizes up to 10 cats and tracks each pet's individual eating habits.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "AI-powered camera",
+              "up to 10 cats",
+              "individual eating habits"
+            ]
+          },
+          {
+            "text": "Certain health tracking features require a Petlibro Care subscription starting at $59.99 per year.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "Petlibro Care subscription",
+              "$59.99 per year",
+              "health tracking"
+            ]
+          }
+        ],
+        "scenes": [
+          "Medium shot of the presenter in the studio, facing camera, gesturing lightly as the segment opens; lower-third graphic reads 'Petlibro Granary 2' with a small TechCrunch source tag.",
+          "Close-up of the presenter speaking calmly to camera; an on-screen graphic to the side shows four feeder icons with price tags from $129.99 to $249.99 and a highlighted scale symbol labeled 'built-in scale'.",
+          "Side-view shot of the presenter turning toward a floating graphic: a camera icon, a counter reading 'up to 10 cats', and a subscription badge reading 'Petlibro Care from $59.99/yr'; graphic fades as the segment ends."
+        ],
+        "script": "If you share your home with more than one cat, Petlibro's new Granary 2 feeders want to tell you who is actually eating. Four models range from about 130 to 250 dollars. Every one has a built-in scale that measures food left in the bowl, so you see intake, not just what was dispensed. Pricier versions add an AI camera that recognizes up to ten cats and logs each pet's meals separately. One catch: some health tracking needs a Petlibro Care subscription, starting at 60 dollars a year.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast.png",
+          "nina_portrait.png",
+          "nina_profile.png"
+        ]
+      },
+      "errors": [
+        "scene 0: describes appearance or set (['studio']), use 'the presenter' only",
+        "reference 0: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast_vertical.png']",
+        "reference 1: 'nina_portrait.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast_vertical.png']",
+        "reference 2: 'nina_profile.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast_vertical.png']"
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "blocked",
+      "spec": {
+        "title": "Petlibro's Granary 2 feeders weigh every meal your cat eats",
+        "claims": [
+          {
+            "text": "Petlibro's Granary 2 series includes four models priced from $129.99 to $249.99.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "four models",
+              "$129.99",
+              "$249.99",
+              "Granary 2"
+            ]
+          },
+          {
+            "text": "Every Granary 2 model has a built-in scale that measures food remaining in the bowl to estimate actual intake.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "built-in scale",
+              "how much remains in the bowl",
+              "actually ate"
+            ]
+          },
+          {
+            "text": "Higher-priced models add an AI-powered camera that recognizes up to 10 cats and tracks each pet's individual eating habits.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "AI-powered camera",
+              "up to 10 cats",
+              "individual eating habits"
+            ]
+          },
+          {
+            "text": "Certain health tracking features require a Petlibro Care subscription starting at $59.99 per year.",
+            "source_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+            "evidence_terms": [
+              "Petlibro Care subscription",
+              "$59.99 per year",
+              "health tracking"
+            ]
+          }
+        ],
+        "scenes": [
+          "Medium shot of the presenter facing camera, gesturing lightly as the segment opens; lower-third graphic reads 'Petlibro Granary 2' with a small TechCrunch source tag.",
+          "Medium close shot of the presenter speaking calmly to camera; an on-screen graphic to the side shows four feeder icons with price tags from $129.99 to $249.99 and a highlighted scale symbol labeled 'built-in scale'.",
+          "Medium shot of the presenter turning toward a floating graphic: a camera icon, a counter reading 'up to 10 cats', and a subscription badge reading 'Petlibro Care from $59.99/yr'; graphic fades as the segment ends."
+        ],
+        "script": "If you share your home with more than one cat, Petlibro's new Granary 2 feeders want to tell you who is actually eating. Four models range from about 130 to 250 dollars. Every one has a built-in scale that measures food left in the bowl, so you see intake, not just what was dispensed. Pricier versions add an AI camera that recognizes up to ten cats and logs each pet's meals separately. One catch: some health tracking needs a Petlibro Care subscription, starting at 60 dollars a year.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast2.png",
+          "nina_podcast2_medium.png",
+          "nina_podcast3.png"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "devin-6343d512d4b84d568abb6614b062aa94",
+  "url": "https://app.devin.ai/sessions/6343d512d4b84d568abb6614b062aa94",
+  "news": {
+    "title": "The AI regulation smackdown isn\u2019t over",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+    "summary": "At the start of this week, the who's-who of AI seemed - at least tentatively - on the side of AI regulation. Over the weekend, Anthropic CEO Dario Amodei had proposed a three-step plan for slowing AI development, including by embedding third-party evaluators in labs, coordinating across the domestic industry, and forging international agreements potentially [&#8230;]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "blocked",
+      "spec": {
+        "title": "The AI regulation smackdown isn't over",
+        "claims": [
+          {
+            "text": "Anthropic CEO Dario Amodei proposed a three-step plan for slowing AI development, including embedding third-party evaluators in labs and forging international agreements.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Dario Amodei",
+              "three-step plan",
+              "third-party evaluators",
+              "international agreements"
+            ]
+          },
+          {
+            "text": "Meta CEO Mark Zuckerberg came out against limiting companies' autonomy.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Mark Zuckerberg",
+              "came out against limiting companies",
+              "autonomy"
+            ]
+          },
+          {
+            "text": "The Trump administration called the idea of a safety crisis in AI a hoax.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Trump administration",
+              "safety crisis",
+              "hoax"
+            ]
+          },
+          {
+            "text": "OpenAI wants Congress to create a framework with mandatory national safety standards for frontier AI.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Chris Lehane",
+              "mandatory national safety standards",
+              "frontier AI",
+              "Congress"
+            ]
+          }
+        ],
+        "scenes": [
+          "Medium shot, the presenter seated in the studio, addressing the camera. On-screen graphic: headline card reading 'The AI regulation smackdown isn't over' with The Verge byline.",
+          "Close-up, slow push in on the presenter. Lower-third graphic lists three bullets: 'Third-party evaluators in labs', 'Domestic industry coordination', 'International agreements'.",
+          "Side-angle shot, the presenter turns toward a floating graphic panel. Split-screen text cards: 'Zuckerberg: against limits on autonomy' versus 'Trump administration: safety crisis a hoax'.",
+          "Medium shot, the presenter back to camera. Closing graphic: quote card 'Mandatory national safety standards for frontier AI' attributed to OpenAI, then a fade to the segment tagline."
+        ],
+        "script": "You might have thought the AI industry finally agreed on regulation. Over the weekend, Anthropic CEO Dario Amodei proposed a three-step plan for slowing AI development, with third-party evaluators inside labs and international agreements. Then the pushback came. Meta CEO Mark Zuckerberg came out against limiting companies' autonomy, and the Trump administration called the idea of an AI safety crisis a hoax. OpenAI still wants Congress to set mandatory national safety standards. So this fight is far from over.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast.png",
+          "nina_portrait.png",
+          "nina_profile.png",
+          "nina_podcast.png"
+        ]
+      },
+      "errors": [
+        "scene 0: describes appearance or set (['studio']), use 'the presenter' only",
+        "reference 0: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 1: 'nina_portrait.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 2: 'nina_profile.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 3: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']"
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "blocked",
+      "spec": {
+        "title": "The AI regulation smackdown isn't over",
+        "claims": [
+          {
+            "text": "Anthropic CEO Dario Amodei proposed a three-step plan for slowing AI development, including embedding third-party evaluators in labs and forging international agreements.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Dario Amodei",
+              "three-step plan",
+              "third-party evaluators",
+              "international agreements"
+            ]
+          },
+          {
+            "text": "Meta CEO Mark Zuckerberg came out against limiting companies' autonomy.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Mark Zuckerberg",
+              "came out against limiting companies",
+              "autonomy"
+            ]
+          },
+          {
+            "text": "The Trump administration called the idea of a safety crisis in AI a hoax.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Trump administration",
+              "safety crisis",
+              "hoax"
+            ]
+          },
+          {
+            "text": "OpenAI wants Congress to create a framework with mandatory national safety standards for frontier AI.",
+            "source_url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+            "evidence_terms": [
+              "Chris Lehane",
+              "mandatory national safety standards",
+              "frontier AI",
+              "Congress"
+            ]
+          }
+        ],
+        "scenes": [
+          "Medium shot, the presenter seated and addressing the camera. On-screen graphic: headline card reading 'The AI regulation smackdown isn't over' with The Verge byline.",
+          "Close-up, slow push in on the presenter. Lower-third graphic lists three bullets: 'Third-party evaluators in labs', 'Domestic industry coordination', 'International agreements'.",
+          "Medium shot, the presenter gestures toward a floating graphic panel. Split-screen text cards: 'Zuckerberg: against limits on autonomy' versus 'Trump administration: safety crisis a hoax'.",
+          "Medium shot, the presenter back to camera. Closing graphic: quote card 'Mandatory national safety standards for frontier AI' attributed to OpenAI, then a fade to the segment tagline."
+        ],
+        "script": "You might have thought the AI industry finally agreed on regulation. Over the weekend, Anthropic CEO Dario Amodei proposed a three-step plan for slowing AI development, with third-party evaluators inside labs and international agreements. Then the pushback came. Meta CEO Mark Zuckerberg came out against limiting companies' autonomy, and the Trump administration called the idea of an AI safety crisis a hoax. OpenAI still wants Congress to set mandatory national safety standards. So this fight is far from over.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast2_medium.png",
+          "nina_podcast3.png",
+          "nina_podcast4_medium.png",
+          "nina_podcast5_medium.png"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

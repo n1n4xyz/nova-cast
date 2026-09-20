@@ -1,0 +1,115 @@
+{
+  "id": "devin-2a2589883a404e949eb35b6bd5c46f63",
+  "url": "https://app.devin.ai/sessions/2a2589883a404e949eb35b6bd5c46f63",
+  "news": {
+    "title": "India forces caller-ID apps to feed spam reports to telcos",
+    "url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+    "summary": "Truecaller says the one-way sharing requirement would hand a commercially valuable proprietary asset to telecom operators."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "blocked",
+      "spec": {
+        "title": "India forces caller-ID apps to feed spam reports to telcos",
+        "claims": [
+          {
+            "text": "India's telecom regulator TRAI now requires caller-ID apps to send user spam reports to a blockchain-based platform run by telecom operators.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "Telecom Regulatory Authority of India",
+              "blockchain-based platform maintained by telecom operators",
+              "call-management apps"
+            ]
+          },
+          {
+            "text": "Truecaller calls the requirement a one-way exchange that is anti-competitive and transfers commercially valuable data to telecom operators.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "one-way exchange",
+              "anti-competitive",
+              "commercially valuable data"
+            ]
+          },
+          {
+            "text": "India is Truecaller's largest market, with well over 350 million monthly active users.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "Truecaller\u2019s largest market",
+              "350 million",
+              "monthly active users"
+            ]
+          }
+        ],
+        "scenes": [
+          "Wide studio shot. The presenter looks into the camera and opens the segment. A lower-third graphic reads 'India: Caller-ID apps must share spam reports'. A stylized map of India appears on the screen behind with a phone icon flagged as spam.",
+          "Close-up on the presenter as the camera slowly pushes in. An on-screen diagram shows an app icon sending a report arrow to a block-chain graphic labeled 'Telecom operators platform', with the label 'TRAI' above it.",
+          "Side-view shot of the presenter gesturing toward a floating graphic. A quote card reads 'One-way exchange, anti-competitive: Truecaller' and a stat counter animates to '350M+ monthly active users in India'. The graphic fades as the segment closes."
+        ],
+        "script": "If you use a caller-ID app in India, your spam reports are about to travel further. Telecom regulator TRAI now requires apps like Truecaller to send user spam reports to a blockchain-based platform run by telecom operators. Truecaller calls it a one-way exchange that is anti-competitive, handing commercially valuable data to telcos. India is its largest market, with well over 350 million monthly active users.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast.png",
+          "nina_portrait.png",
+          "nina_profile.png"
+        ]
+      },
+      "errors": [
+        "scene 0: describes appearance or set (['studio']), use 'the presenter' only",
+        "reference 0: 'nina_podcast.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 1: 'nina_portrait.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "reference 2: 'nina_profile.png' not in assets, allowed: ['nina_podcast2.png', 'nina_podcast2_medium.png', 'nina_podcast3.png', 'nina_podcast3_medium.png', 'nina_podcast4.png', 'nina_podcast4_medium.png', 'nina_podcast5.png', 'nina_podcast5_medium.png', 'nina_podcast_vertical.png']",
+        "claim 2: terms not found on source page: ['Truecaller\u2019s largest market']"
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "blocked",
+      "spec": {
+        "title": "India forces caller-ID apps to feed spam reports to telcos",
+        "claims": [
+          {
+            "text": "India's telecom regulator TRAI now requires caller-ID apps to send user spam reports to a blockchain-based platform run by telecom operators.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "Telecom Regulatory Authority of India",
+              "blockchain-based platform maintained by telecom operators",
+              "call-management apps"
+            ]
+          },
+          {
+            "text": "Truecaller calls the requirement a one-way exchange that is anti-competitive and transfers commercially valuable data to telecom operators.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "one-way exchange",
+              "anti-competitive",
+              "commercially valuable data"
+            ]
+          },
+          {
+            "text": "India is Truecaller's largest market, with well over 350 million monthly active users.",
+            "source_url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+            "evidence_terms": [
+              "largest market",
+              "350 million",
+              "monthly active users"
+            ]
+          }
+        ],
+        "scenes": [
+          "Wide shot. The presenter looks into the camera and opens the segment. A lower-third graphic reads 'India: Caller-ID apps must share spam reports'. A stylized map of India appears on screen with a phone icon flagged as spam.",
+          "Medium shot as the camera slowly pushes in on the presenter. An on-screen diagram shows an app icon sending a report arrow to a blockchain graphic labeled 'Telecom operators platform', with the label 'TRAI' above it.",
+          "Medium shot. The presenter gestures toward a floating graphic. A quote card reads 'One-way exchange, anti-competitive: Truecaller' and a stat counter animates to '350M+ monthly active users in India'. The graphic fades as the segment closes."
+        ],
+        "script": "If you use a caller-ID app in India, your spam reports are about to travel further. Telecom regulator TRAI now requires apps like Truecaller to send user spam reports to a blockchain-based platform run by telecom operators. Truecaller calls it a one-way exchange that is anti-competitive, handing commercially valuable data to telcos. India is its largest market, with well over 350 million monthly active users.",
+        "ai_label": true,
+        "references": [
+          "nina_podcast2.png",
+          "nina_podcast3_medium.png",
+          "nina_podcast4_medium.png"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}
