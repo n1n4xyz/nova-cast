@@ -6,11 +6,11 @@ The presenter, Nina de la Nova, is a fully synthetic character. Nothing airs unl
 
 Built at HackBarna AI Summit 2026, Barcelona.
 
-**[Watch the demo (under 60 seconds)]
+**[Watch the demo (under 60 seconds)]**
 
 https://github.com/user-attachments/assets/cd390301-d42c-4783-b739-5c6f8ee2bc0a
 
-**
+
 
 ## How it works
 
