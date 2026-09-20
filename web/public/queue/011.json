@@ -1,0 +1,62 @@
+{
+  "title": "Should AI companies get an antitrust exemption to slow down?",
+  "claims": [
+    {
+      "text": "On The Verge's Decoder podcast, Nilay Patel talks with Jonathan Kanter, the former antitrust chief at the US Department of Justice under President Biden.",
+      "source_url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "evidence_terms": [
+        "Decoder",
+        "Jonathan Kanter",
+        "former antitrust chief for the US Department of Justice",
+        "Biden administration"
+      ]
+    },
+    {
+      "text": "The CEOs of major AI labs have asked for antitrust exemptions so they can coordinate on safety issues.",
+      "source_url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "evidence_terms": [
+        "CEOs of all these companies",
+        "asking for antitrust exemptions",
+        "coordinate on safety issues"
+      ]
+    },
+    {
+      "text": "Critics see regulatory capture, or even a cartel forming.",
+      "source_url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "evidence_terms": [
+        "regulatory capture",
+        "attempting to form a cartel"
+      ]
+    },
+    {
+      "text": "Kanter's view is that this powerful technology needs basic rules of the road.",
+      "source_url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "evidence_terms": [
+        "incredibly powerful technology",
+        "basic rules of the road",
+        "no lines on the road"
+      ]
+    }
+  ],
+  "scenes": [
+    "Wide shot. The presenter looks into the camera as a lower-third graphic reads 'Decoder: AI and antitrust'. The Verge headline appears as a floating card to the right of frame.",
+    "Close-up on the presenter speaking. An on-screen graphic lists three words stacked vertically: 'Exemption', 'Coordination', 'Safety', each highlighting in turn as the presenter speaks.",
+    "Medium shot. The presenter gestures toward a graphic that shows two labels, 'Regulatory capture' and 'Cartel', with a question mark between them, then the graphic fades to a road with lane lines being drawn in."
+  ],
+  "script": "Here is a question you might not expect: should AI companies be allowed to coordinate with each other? On The Verge's Decoder podcast, Nilay Patel talks with Jonathan Kanter, the former antitrust chief at the US Department of Justice under President Biden. The backdrop is the debate over AI safety, where the CEOs of major labs have asked for antitrust exemptions so they can coordinate on safety issues. Critics see something else: regulatory capture, or even a cartel forming. Kanter's view is that this powerful technology needs basic rules of the road. You decide who should be writing them.",
+  "ai_label": true,
+  "references": [
+    "nina_podcast2.png",
+    "nina_podcast3_medium.png",
+    "nina_podcast4_medium.png"
+  ],
+  "audio_url": "https://v3b.fal.media/files/b/0aab2887/1vVk5E3L84JpwO8IoMW1O_nina_1789891910480.wav",
+  "audio_seconds": 41.2,
+  "tts_latency": 9.92,
+  "news": {
+    "key": "373f3d22cfc0aaecc771025959b457bd39c17c24",
+    "title": "Does AI need an antitrust exemption so it doesn&#8217;t kill everyone????",
+    "url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+    "summary": "Today on Decoder, we\u2019ve got the first of a two-part series on the future of business, and I&#8217;m talking with Jonathan Kanter, the former antitrust chief for the US Department of Justice in the Biden administration. These days, he\u2019s both a professor of law at WashU and professor of technology policy at Carnegie Mellon. The [&#8230;]"
+  }
+}
