@@ -33,8 +33,8 @@ export default function Home() {
 
   async function run() {
     const spec = await (await fetch("/segment.json")).json();
-    const step = Math.max(5, Math.floor(40 / spec.scenes.length));
-    totalRef.current = spec.scenes.length * step;
+    const step = Math.max(5, Math.floor((spec.audio_seconds ?? 40) / spec.scenes.length));
+    totalRef.current = spec.audio_seconds ? Math.ceil(spec.audio_seconds) + 2 : spec.scenes.length * step;
     const sentences: string[] = spec.script.match(/[^.!?]+[.!?]+/g) ?? [spec.script];
     const per = Math.ceil(sentences.length / spec.scenes.length);
     const withLine = (p: string, i: number) => {
@@ -43,7 +43,7 @@ export default function Home() {
     };
     const anchor = IMAGE_BASE + (spec.references?.[0] ?? "nina_podcast.png");
     const script = spec.scenes.map((p: string, i: number) =>
-      i === 0 ? { offset: 0, prompt: withLine(p, i) } : { offset: i * step, prompt: withLine(p, i) });
+      i === 0 ? { offset: 0, prompt: p, ...(spec.audio_url ? { audio_url: spec.audio_url } : {}) } : { offset: i * step, prompt: p });
     const session = fal.realtime.open(wma("minimax/h3-max/director"), {
       receive: ["video", "audio"],
       onMedia: (stream) => {
