@@ -3,3 +3,10 @@
 __pycache__/
 runs/
 segment.json
+.env
+.venv/
+produced.json
+*.wav
+web/.env.local
+web/public/status.json
+web/public/status.tmp

@@ -19,6 +19,10 @@ const IMAGES: Img[] = [
           "desk in front, a black podcast microphone on a boom arm in front of her" },
   { file: "nina_podcast2_medium.png", framing: "static medium shot at eye level, standing", room: SLAT_ROOM },
   { file: "nina_podcast3_medium.png", framing: "static medium shot at eye level, standing", room: SLAT_ROOM },
+  { file: "nina_podcast4_medium.png", framing: "static medium shot at eye level, standing", room: SLAT_ROOM },
+  { file: "nina_podcast5_medium.png", framing: "static medium shot at eye level, standing",
+    room: "a bright studio with soft grey walls and beige acoustic panels behind her, a warm lamp and a desk " +
+          "with an audio mixer and a microphone on a boom arm at the left, a green plant at the right edge" },
 ];
 const premise = (img: Img) =>
   `Realistic talking-head segment. One presenter, ${img.framing}, speaking calmly to camera ` +
