@@ -4,17 +4,24 @@ import { createFalClient } from "@fal-ai/client";
 import { wma } from "@fal-ai/client/realtime";
 
 const fal = createFalClient({ proxyUrl: "/api/fal/proxy" });
-const IMAGE = "https://raw.githubusercontent.com/n1n4xyz/nova-cast/main/assets/nina_podcast_vertical.png";
+const BASE = "https://raw.githubusercontent.com/n1n4xyz/nova-cast/main/assets/";
 const ASPECT = "9:16";
-const ROOM =
-  "a softly lit blue-lilac wall with a string of warm Edison bulbs above her, " +
-  "a dark wooden desk in front, a black podcast microphone on a boom arm in front of her";
-const PREMISE =
-  "Realistic talking-head segment. One presenter, static medium shot at eye level, " +
-  "speaking calmly to camera with small natural hand gestures. Her face, hair, outfit, " +
-  "lighting and room stay exactly as in the first frame. Natural skin texture, soft even lighting, " +
-  "gentle contrast, documentary realism. The room: " + ROOM +
-  ". The frame shows only the presenter and this room for the whole shot.";
+type Img = { file: string; framing: string; room: string };
+const SLAT_ROOM =
+  "a warm backlit vertical wooden slat wall behind her, the edge of a podcast desk with a " +
+  "microphone on a boom arm at the left, shelves with green plants at the right";
+const IMAGES: Img[] = [
+  { file: "nina_podcast_vertical.png", framing: "static medium shot at eye level, seated at a desk",
+    room: "a softly lit blue-lilac wall with a string of warm Edison bulbs above her, a dark wooden " +
+          "desk in front, a black podcast microphone on a boom arm in front of her" },
+  { file: "nina_podcast2_medium.png", framing: "static medium shot at eye level, standing", room: SLAT_ROOM },
+  { file: "nina_podcast3_medium.png", framing: "static medium shot at eye level, standing", room: SLAT_ROOM },
+];
+const premise = (img: Img) =>
+  `Realistic talking-head segment. One presenter, ${img.framing}, speaking calmly to camera ` +
+  `with small natural hand gestures. Her face, hair, outfit, lighting and room stay exactly as ` +
+  `in the first frame. Natural skin texture, soft even lighting, gentle contrast, documentary ` +
+  `realism. The room: ${img.room}. The frame shows only the presenter and this room for the whole shot.`;
 const SCENES = [
   "The presenter speaks calmly to camera, relaxed posture.",
   "The presenter continues explaining, one small hand gesture.",
@@ -22,6 +29,26 @@ const SCENES = [
   "The presenter keeps talking calmly to camera and ends with a small nod, same framing.",
 ];
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+function cuesFrom(script: string, secs: number) {
+  const words = script.split(/\s+/).filter(Boolean);
+  const groups: string[] = [];
+  for (let i = 0; i < words.length; i += 6) groups.push(words.slice(i, i + 6).join(" "));
+  const total = groups.reduce((n, g) => n + g.length, 0) || 1;
+  let t = 0;
+  return groups.map((text) => { const start = t; t += (text.length / total) * secs; return { start, end: t, text }; });
+}
+
+function wrap(ctx: CanvasRenderingContext2D, text: string, maxW: number) {
+  const lines: string[] = [];
+  let line = "";
+  for (const w of text.split(" ")) {
+    const test = line ? `${line} ${w}` : w;
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; } else line = test;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
 
 function download(chunks: Blob[], mime: string, name: string) {
   const a = document.createElement("a");
@@ -32,27 +59,71 @@ function download(chunks: Blob[], mime: string, name: string) {
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const runningRef = useRef(false);
   const pausedRef = useRef(false);
-  const [paused, setPaused] = useState(false);
   const sessionRef = useRef<any>(null);
+  const [paused, setPaused] = useState(false);
   const [log, setLog] = useState<string[]>([]);
   const [status, setStatus] = useState("");
   const [title, setTitle] = useState("");
   const add = (m: string) => setLog((l) => [...l.slice(-40), m]);
 
-  function playSegment(name: string, spec: any): Promise<void> {
+  function playSegment(name: string, spec: any, img: Img): Promise<void> {
     return new Promise((resolve) => {
       const v = videoRef.current!;
+      const c = canvasRef.current!;
+      const ctx = c.getContext("2d")!;
+      add(`${name}: image ${img.file}`);
       const combined = new MediaStream();
       v.srcObject = combined;
       const secs = spec.audio_seconds ?? 25;
+      const cues = cuesFrom(spec.script ?? "", secs);
       const step = Math.max(5, Math.floor(secs / SCENES.length));
       const script = SCENES.map((p, i) =>
         i === 0 ? { offset: 0, prompt: p, audio_url: spec.audio_url } : { offset: i * step, prompt: p });
       let recorder: MediaRecorder | null = null;
       const chunks: Blob[] = [];
       let finished = false;
+      let t0 = 0;
+
+      const draw = () => {
+        if (finished) return;
+        if (v.videoWidth) {
+          if (c.width !== v.videoWidth) { c.width = v.videoWidth; c.height = v.videoHeight; }
+          const W = c.width, H = c.height, s = W / 400;
+          ctx.drawImage(v, 0, 0, W, H);
+          ctx.textBaseline = "middle";
+          ctx.textAlign = "left";
+          ctx.font = `600 ${11 * s}px sans-serif`;
+          const label = "AI GENERATED";
+          ctx.fillStyle = "rgba(0,0,0,.6)";
+          ctx.fillRect(12 * s, 12 * s, ctx.measureText(label).width + 16 * s, 22 * s);
+          ctx.fillStyle = "#fff";
+          ctx.fillText(label, 20 * s, 23 * s);
+          if (t0) {
+            const t = (performance.now() - t0) / 1000;
+            const cue = cues.find((q) => t >= q.start && t < q.end);
+            if (cue) {
+              ctx.font = `700 ${20 * s}px sans-serif`;
+              ctx.textAlign = "center";
+              const lines = wrap(ctx, cue.text, W * 0.85);
+              const lh = 28 * s;
+              const y0 = H * 0.8 - ((lines.length - 1) * lh) / 2;
+              lines.forEach((ln, i) => {
+                const y = y0 + i * lh;
+                const w = ctx.measureText(ln).width + 16 * s;
+                ctx.fillStyle = "rgba(0,0,0,.65)";
+                ctx.fillRect(W / 2 - w / 2, y - lh / 2, w, lh);
+                ctx.fillStyle = "#fff";
+                ctx.fillText(ln, W / 2, y);
+              });
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      };
+      requestAnimationFrame(draw);
 
       const finish = async (reason: string) => {
         if (finished) return;
@@ -70,8 +141,11 @@ export default function Home() {
 
       v.addEventListener("playing", () => {
         setStatus("");
+        t0 = performance.now();
+        c.width = v.videoWidth; c.height = v.videoHeight;
         const mime = MediaRecorder.isTypeSupported("video/mp4") ? "video/mp4" : "video/webm";
-        recorder = new MediaRecorder(combined, { mimeType: mime });
+        const out = new MediaStream([...c.captureStream(30).getVideoTracks(), ...combined.getAudioTracks()]);
+        recorder = new MediaRecorder(out, { mimeType: mime });
         recorder.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
         recorder.start(1000);
         add(`${name}: live, ends in ${Math.ceil(secs) + 2}s`);
@@ -92,14 +166,14 @@ export default function Home() {
           if (m.type === "configured") setStatus("Generating first chunk...");
           if (m.type === "error") finish(`error ${m.code}`);
         },
-        onState: (s) => { if (s === "failed" || s === "closed") finish(`state ${s}`); },
+        onState: (st) => { if (st === "failed" || st === "closed") finish(`state ${st}`); },
         onError: (e) => finish(`error ${String(e)}`),
       });
       sessionRef.current = session;
       session.send({
         type: "configure", prompt_version: 1, protocol_version: 1,
-        prompt: PREMISE, resolution: "768p", aspect_ratio: ASPECT,
-        image_url: IMAGE, memory: 12, script,
+        prompt: premise(img), resolution: "768p", aspect_ratio: ASPECT,
+        image_url: BASE + img.file, memory: 12, script,
       });
     });
   }
@@ -117,7 +191,7 @@ export default function Home() {
         const spec = await (await fetch(`/queue/${name}?t=${Date.now()}`)).json();
         setTitle(spec.title ?? name);
         setStatus("Connecting...");
-        await playSegment(name, spec);
+        await playSegment(name, spec, IMAGES[(idx - 1) % IMAGES.length]);
       } else {
         setStatus("Waiting for the next segment...");
         await sleep(10000);
@@ -132,21 +206,24 @@ export default function Home() {
     try { await sessionRef.current?.close(); } catch {}
   }
 
+  const btn = { padding: "8px 16px", border: "1px solid #111", borderRadius: 6 };
   return (
     <main style={{ padding: 24, fontFamily: "sans-serif" }}>
       <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-        <button onClick={start} style={{ padding: "8px 16px", background: "#111", color: "#fff", borderRadius: 6 }}>Start</button>
-        <button onClick={stop} style={{ padding: "8px 16px", border: "1px solid #111", borderRadius: 6 }}>Stop</button>
-        <button onClick={() => { pausedRef.current = !pausedRef.current; setPaused(pausedRef.current); }} style={{ padding: "8px 16px", border: "1px solid #111", borderRadius: 6 }}>{paused ? "Resume" : "Pause after this segment"}</button>
+        <button onClick={start} style={{ ...btn, background: "#111", color: "#fff" }}>Start</button>
+        <button onClick={stop} style={btn}>Stop</button>
+        <button onClick={() => { pausedRef.current = !pausedRef.current; setPaused(pausedRef.current); }} style={btn}>
+          {paused ? "Resume" : "Pause after this segment"}
+        </button>
       </div>
       {title && <p style={{ margin: "0 0 8px", fontSize: 14 }}>Now: {title}</p>}
       <div style={{ position: "relative", display: "inline-block" }}>
-        <video ref={videoRef} autoPlay playsInline controls style={{ maxHeight: "75vh", background: "#000" }} />
-        <span style={{ position: "absolute", top: 12, left: 12, background: "rgba(0,0,0,.6)",
-          color: "#fff", padding: "4px 8px", fontSize: 12, borderRadius: 4 }}>AI GENERATED</span>
+        <canvas ref={canvasRef} style={{ maxHeight: "75vh", background: "#000", display: "block" }} />
         {status && <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center",
           justifyContent: "center", color: "#fff", fontSize: 14 }}>{status}</span>}
       </div>
+      <video ref={videoRef} autoPlay playsInline
+        style={{ position: "absolute", width: 1, height: 1, opacity: 0, pointerEvents: "none" }} />
       <pre style={{ fontSize: 11, maxHeight: 200, overflow: "auto" }}>{log.join("\n")}</pre>
     </main>
   );
