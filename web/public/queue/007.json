@@ -1,0 +1,60 @@
+{
+  "title": "Disrupt 2026 Ticket Prices Rise After September 25",
+  "claims": [
+    {
+      "text": "The current ticket pricing window for TechCrunch Disrupt 2026 ends Friday, September 25 at 11:59 p.m. PT, after which prices increase.",
+      "source_url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+      "evidence_terms": [
+        "Sept. 25 at 11:59 p.m. PT",
+        "prices increase",
+        "current ticket pricing window"
+      ]
+    },
+    {
+      "text": "Registering before the deadline saves up to $200 on a ticket.",
+      "source_url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+      "evidence_terms": [
+        "Save up to $200",
+        "before the deadline"
+      ]
+    },
+    {
+      "text": "Disrupt 2026 takes place October 13-15 at Moscone West in San Francisco.",
+      "source_url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+      "evidence_terms": [
+        "October 13-15",
+        "Moscone West",
+        "San Francisco"
+      ]
+    },
+    {
+      "text": "More than 10,000 founders, investors, and tech leaders are expected to attend.",
+      "source_url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+      "evidence_terms": [
+        "10,000+ founders, investors",
+        "tech leaders"
+      ]
+    }
+  ],
+  "scenes": [
+    "Medium shot. The presenter looks into the camera and speaks. A lower-third graphic reads: TechCrunch Disrupt 2026 - Ticket Deadline.",
+    "Medium close-up. The presenter gestures lightly toward the side of the frame. A calendar graphic slides in showing September 25, 11:59 p.m. PT, with the label: Prices increase after this date.",
+    "Medium shot. The presenter turns slightly toward a floating info card. On-screen text reads: Save up to $200 - October 13-15 - Moscone West, San Francisco - 10,000+ attendees. The card fades out as the presenter faces the camera again."
+  ],
+  "script": "If you are planning to attend TechCrunch Disrupt 2026, here is a date to keep in mind. The current ticket pricing window ends Friday, September 25 at 11:59 p.m. Pacific time. After that, prices go up. Register before the deadline and you save up to 200 dollars. Disrupt runs October 13 to 15 at Moscone West in San Francisco, with more than 10,000 founders, investors, and tech leaders expected. So if you want in, this is your week to book.",
+  "ai_label": true,
+  "references": [
+    "nina_podcast2.png",
+    "nina_podcast2_medium.png",
+    "nina_podcast3.png"
+  ],
+  "audio_url": "https://v3b.fal.media/files/b/0aab27ba/n_eQP1kuhcACb1MmI-EKp_nina_1789889863933.wav",
+  "audio_seconds": 31.6,
+  "tts_latency": 7.87,
+  "news": {
+    "key": "e9d1d908f30709fb1679c6fc689869723c2089c1",
+    "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
+    "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+    "summary": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.."
+  }
+}

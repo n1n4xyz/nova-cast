@@ -1,5 +1,5 @@
-"""News in, validated and voiced segments out, into web/public/queue."""
-import hashlib, json, os, re, struct, sys, time
+"""News in, validated and voiced segments out. Writes live status for the site."""
+import datetime, hashlib, json, os, re, struct, sys, threading, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 import feedparser, requests, fal_client
@@ -14,11 +14,29 @@ FEEDS = [
     "https://www.technologyreview.com/topic/artificial-intelligence/feed",
 ]
 QUEUE = Path("web/public/queue")
+STATUS = Path("web/public/status.json")
 STATE = Path("produced.json")
-PARALLEL = 3     # Devin sessions at once
-PER_ROUND = 3    # news items per round
-INTERVAL = 600   # seconds between rounds
+PARALLEL, PER_ROUND, INTERVAL = 3, 3, 600
 VOICE = "aura-2-helena-en"
+
+_lock = threading.Lock()
+_events, _active = [], {}
+
+
+def emit(kind, title, text=""):
+    with _lock:
+        _events.insert(0, {"t": datetime.datetime.now().strftime("%H:%M"), "kind": kind,
+                           "title": title[:90], "text": str(text)[:160]})
+        del _events[40:]
+        if kind in ("queued", "refused", "error"):
+            _active.pop(title, None)
+        else:
+            _active[title] = kind
+        STATUS.parent.mkdir(parents=True, exist_ok=True)
+        tmp = STATUS.with_suffix(".tmp")
+        tmp.write_text(json.dumps({"events": _events,
+            "active": [{"title": k, "stage": v} for k, v in _active.items()]}))
+        tmp.replace(STATUS)
 
 
 def fetch_news(seen):
@@ -44,16 +62,19 @@ def tts(script):
     ch, rate = struct.unpack("<HI", data[22:28])
     bits = struct.unpack("<H", data[34:36])[0]
     secs = (len(data) - 44) / (rate * ch * bits / 8)
-    path = f"/tmp/nina_{int(time.time()*1000)}.wav"
+    path = f"/tmp/nina_{int(time.time() * 1000)}.wav"
     open(path, "wb").write(data)
     return fal_client.upload_file(path), secs, latency
 
 
 def produce(item):
-    spec = d.run({"title": item["title"], "url": item["url"], "summary": item["summary"]})
+    title = item["title"]
+    spec = d.run({"title": title, "url": item["url"], "summary": item["summary"]},
+                 on_event=lambda kind, text: emit(kind, title, text))
     if not spec:
         return None
     url, secs, lat = tts(spec["script"])
+    emit("voice", title, f"{secs:.0f}s of audio, TTS in {lat:.1f}s")
     spec.update(audio_url=url, audio_seconds=round(secs, 1), tts_latency=round(lat, 2), news=item)
     return spec
 
@@ -66,28 +87,30 @@ def enqueue(spec):
     (QUEUE / name).write_text(json.dumps(spec, indent=2))
     names.append(name)
     idx.write_text(json.dumps(names))
-    print(f"QUEUED {name}: {spec['title']} ({spec['audio_seconds']}s, TTS {spec['tts_latency']}s)")
+    emit("queued", spec["news"]["title"], f"ready to air as {name}")
+    print(f"QUEUED {name}: {spec['title']}")
 
 
 def main():
     seen = set(json.loads(STATE.read_text())) if STATE.exists() else set()
     while True:
         items = fetch_news(seen)[:PER_ROUND]
-        print(f"round: {len(items)} new items")
+        for it in items:
+            emit("research", it["title"], "picked up from the feed")
         with ThreadPoolExecutor(PARALLEL) as ex:
             futs = {ex.submit(produce, it): it for it in items}
             for f in as_completed(futs):
-                seen.add(futs[f]["key"])
+                it = futs[f]
+                seen.add(it["key"])
                 STATE.write_text(json.dumps(sorted(seen)))
                 try:
                     spec = f.result()
                 except Exception as e:
+                    emit("error", it["title"], e)
                     print("error:", e)
                     continue
                 if spec:
                     enqueue(spec)
-                else:
-                    print("refused:", futs[f]["title"])
         if "--once" in sys.argv:
             break
         time.sleep(INTERVAL)

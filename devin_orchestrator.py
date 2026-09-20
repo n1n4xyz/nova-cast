@@ -150,7 +150,8 @@ def log(run, entry):
     (RUN_DIR / f"{run['id']}.json").write_text(json.dumps(run, indent=2))
 
 
-def run(news):
+def run(news, on_event=None):
+    emit = on_event or (lambda kind, text: None)
     s = api("POST", "/sessions", json={
         "prompt": PROMPT.format(news=json.dumps(news, indent=2)),
         "structured_output_schema": SPEC_SCHEMA,
@@ -161,6 +162,7 @@ def run(news):
     sid = s["session_id"]
     record = {"id": sid, "url": s.get("url"), "news": news, "attempts": []}
     print(f"session {sid} {s.get('url')}")
+    emit("writing", "Devin started writing")
 
     prev = None
     for attempt in range(1, MAX_ATTEMPTS + 1):
@@ -169,13 +171,16 @@ def run(news):
         log(record, {"attempt": attempt, "status": status, "spec": spec, "errors": errors})
         if not errors:
             print(f"PASS on attempt {attempt}")
+            emit("passed", f"verified on attempt {attempt}")
             return spec
         print(f"FAIL attempt {attempt}:\n  " + "\n  ".join(errors))
+        emit("blocked", errors[0])
         api("POST", f"/sessions/{sid}/message", json={"message":
             "The validator rejected your output. Fix every point and update the "
             "structured output again:\n- " + "\n- ".join(errors)})
 
     print("REFUSED: no valid spec after max attempts, nothing ships")
+    emit("refused", "dropped after 3 failed attempts")
     return None
 
 
